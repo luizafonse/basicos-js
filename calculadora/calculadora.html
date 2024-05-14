@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="arquivo.js">
+</script>
+<style>
+    #calculadora{
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 40px;
+        max-width: max-content;
+    }
+    .botao{
+        border: solid 2px black;
+        height: 30px;
+    }
+    #resultado{
+        grid-column: span 3;
+        border: solid 2px black;
+    }
+</style>
+</head>
+<body>
+    <div id="calculadora">
+        <div id="resultado"></div>
+        <div class="botao" onclick="mostra(1);">1</div>
+        <div class="botao" onclick="mostra(2);">2</div>
+        <div class="botao" onclick="mostra(3);">3</div>
+        <div class="botao" onclick="mostra(4);">4</div>
+        <div class="botao" onclick="mostra(5);">5</div>
+        <div class="botao" onclick="mostra(6);">6</div>
+        <div class="botao" onclick="mostra(7);">7</div>
+        <div class="botao" onclick="mostra(8);">8</div>
+        <div class="botao" onclick="mostra(9);">9</div>
+        <div class="botao" onclick="mostra(0);">0</div>
+        <div class="botao" onclick="mostra('+');">+</div>
+        <div class="botao" onclick="calcula();">=</div>
+        <div class="botao" onclick="mostra('-');">-</div>
+        <div class="botao" onclick="mostra('*');">*</div>
+        <div class="botao" onclick="mostra('/');">/</div>
+    </div>
+</body>
+</html>

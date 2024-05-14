@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script language="JavaScript">
+        function AlterarTamanho(){
+            //criar variavei para alt e lar e obter seu valor
+            var a = document.getElementById("alt").value;
+            var l = document.getElementById("lar").value;
+            //redimensionar a imagem
+            document.getElementById("imagem1").height = a;
+            document.getElementById("imagem1").width = l;
+        }
+        function TrocarImg(){
+            document.getElementById("imagem1").src="kid2.jpg";
+
+        }
+        function Restaurar(){
+            setTimeout(document.getElementById("imagem1").src="kid1.jpg", 100);
+           
+        }
+        
+    </script>
+</head>
+<body>
+    <img src="kid1.jpg" id="imagem1">
+    <form>
+        Altura: <input type="text" id="alt" /><br>
+        Largura: <input type="text" id="lar" /><br>
+        <input type="button" id="btnTam" 
+        value="Alterar Tamanho" onclick="AlterarTamanho()"/>
+        <input type="button" id="btnTam" 
+        value="TrocarImg" onclick="TrocarImg()"/>
+        <input type="button" id="btnTam" 
+        value="Resetar" onclick="Restaurar()"/>
+    </form>
+   
+</body>
+</html>
